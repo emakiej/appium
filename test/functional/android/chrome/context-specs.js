@@ -4,7 +4,7 @@ var desired = require('./desired')
   ,  loadWebView = webviewHelper.loadWebView
   , setup = require("../../common/setup-base");
 
-describe("chrome @android-arm-only", function () {
+describe(desired.browserName + "@android-arm-only", function () {
   describe('contexts', function () {
     var driver;
     setup(this, desired, {'no-reset': true}).then(function (d) { driver = d; });
