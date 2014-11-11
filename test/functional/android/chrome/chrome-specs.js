@@ -5,7 +5,7 @@ var desired = require('./desired')
   , loadWebView = webviewHelper.loadWebView
   , setup = require("../../common/setup-base");
 
-describe("chrome @android-arm-only", function () {
+describe(desired.browserName + " @android-arm-only", function () {
   var tests = ['alerts', 'basics', 'cookies', 'execute-async', 'execute',
                'frames', 'iframes', 'implicit-wait', 'touch', 'window-title'];
   _.each(tests, function (test) {
