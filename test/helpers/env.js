@@ -218,12 +218,17 @@ env.localIP = function () {
 env.LOCAL_APPIUM_PORT = env.SAUCE ? 4443 : env.APPIUM_PORT;
 env.TEST_END_POINT = 'http://localhost:' + env.LOCAL_APPIUM_PORT + '/test/';
 env.GUINEA_TEST_END_POINT = env.TEST_END_POINT + 'guinea-pig';
+env.TEST_END_POINT = 'http://appium-test.prv.pl/test/';
+env.GUINEA_TEST_END_POINT = env.TEST_END_POINT + 'guinea-pig.html';
+
 if (env.REAL_DEVICE) {
   env.CHROME_TEST_END_POINT = 'http://' + env.localIP() + ':' + env.LOCAL_APPIUM_PORT + '/test/';
+  env.CHROME_TEST_END_POINT = 'http://appium-test.prv.pl/test/';
 } else {
   env.CHROME_TEST_END_POINT = 'http://10.0.2.2:' + env.LOCAL_APPIUM_PORT + '/test/';
 }
 env.CHROME_GUINEA_TEST_END_POINT = env.CHROME_TEST_END_POINT + 'guinea-pig';
+env.CHROME_GUINEA_TEST_END_POINT = env.CHROME_TEST_END_POINT + 'guinea-pig.html';
 env.PHISHING_END_POINT = env.TEST_END_POINT.replace('http://', 'http://foo:bar@');
 
 module.exports = env;
